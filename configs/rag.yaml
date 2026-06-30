@@ -1,0 +1,7 @@
+rag:
+  backend: mock
+  production_backend: vector_db
+  top_k: 5
+  rerank: true
+  acl_filter: true
+  citation_required: true

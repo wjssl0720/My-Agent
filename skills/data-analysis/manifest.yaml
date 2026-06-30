@@ -1,0 +1,10 @@
+name: data_analysis
+version: 0.1.0
+description: 数据分析和只读 SQL 结果解释。
+owner: data
+enabled: true
+tags:
+  - data_analysis
+required_tools:
+  - bi.run_readonly_sql
+prompt_file: SKILL.md

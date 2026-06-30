@@ -1,0 +1,14 @@
+id: data_permission_denied_001
+agent_id: data_agent
+caller:
+  user_id: user_003
+  tenant_id: default
+  department: ecommerce
+  roles: [operator]
+session_id: session_data_denied
+input: 帮我生成今天的销售报表
+expected:
+  must_call_tools:
+    - bi.run_readonly_sql
+  must_have_status:
+    bi.run_readonly_sql: denied

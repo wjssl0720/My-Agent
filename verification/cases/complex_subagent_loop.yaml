@@ -1,0 +1,26 @@
+id: complex_subagent_001
+agent_id: product_agent
+caller:
+  user_id: user_002
+  tenant_id: default
+  department: ecommerce
+  roles: [analyst]
+session_id: session_complex
+input: 分析 SPU Y28H23093 最近转化下降的原因，并给出运营建议
+expected:
+  must_have_events:
+    - task.planned
+    - subagent.dispatched
+    - subagent.completed
+  must_dispatch_subagents:
+    - product_subagent
+    - rag_subagent
+    - data_subagent
+    - report_subagent
+  must_call_tools:
+    - product.get_sku
+    - rag.search
+    - bi.run_readonly_sql
+    - bi.generate_report
+  must_have_status:
+    bi.run_readonly_sql: executed

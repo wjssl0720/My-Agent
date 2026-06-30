@@ -1,0 +1,27 @@
+skills:
+  product_copywriting:
+    enabled: true
+    path: skills/product_copywriting
+    version: 0.1.0
+    owner: product
+  data_analysis:
+    enabled: true
+    path: skills/data_analysis
+    version: 0.1.0
+    owner: data
+  policy_check:
+    enabled: true
+    path: skills/policy_check
+    version: 0.1.0
+    owner: cs
+  citation_answer:
+    enabled: true
+    path: skills/citation_answer
+    version: 0.1.0
+    owner: platform
+
+  chart_report:
+    enabled: true
+    path: skills/chart_report
+    version: 0.1.0
+    owner: data

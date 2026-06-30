@@ -1,0 +1,11 @@
+workspace:
+  backend: local
+  production_backend: container_sandbox
+  base_dir: /tmp/ecom_agent_workspaces
+  cleanup:
+    ttl_minutes: 1440
+    max_workspace_size_mb: 512
+  sandbox:
+    allow_shell: false
+    allow_python: true
+    allow_network: false

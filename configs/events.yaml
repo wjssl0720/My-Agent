@@ -1,0 +1,7 @@
+events:
+  bus: in_memory
+  store: in_memory
+  production_store: postgres_or_clickhouse
+  stream:
+    sse_enabled: true
+    websocket_enabled: false

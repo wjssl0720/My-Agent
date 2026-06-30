@@ -1,0 +1,28 @@
+agents:
+  knowledge_agent:
+    name: 企业知识 Agent
+    role: knowledge
+    tools: [rag.search]
+    skills: [citation_answer]
+    subagents: []
+
+  product_agent:
+    name: 商品导购 Agent
+    role: product
+    tools: [product.get_sku, product.search_similar, rag.search]
+    skills: [product_copywriting, citation_answer]
+    subagents: [product_subagent, rag_subagent, data_subagent, report_subagent]
+
+  data_agent:
+    name: 数据分析 Agent
+    role: data
+    tools: [bi.run_readonly_sql, bi.generate_report, rag.search]
+    skills: [data_analysis, chart_report]
+    subagents: [data_subagent, report_subagent]
+
+  aftersales_agent:
+    name: 售后 Agent
+    role: aftersales
+    tools: [order.get_order, order.refund, rag.search]
+    skills: [policy_check, citation_answer]
+    subagents: [order_subagent, rag_subagent]

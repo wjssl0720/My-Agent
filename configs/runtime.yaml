@@ -1,0 +1,13 @@
+runtime:
+  model_policy: local_harness
+  max_loop_steps: 8
+  max_subagent_depth: 2
+  compact_after_steps: 5
+
+agentscope:
+  model_provider: dashscope
+  model_name: qwen-plus
+  enable_event_stream: true
+  enable_memory: true
+  enable_workspace: true
+  enable_permission_hook: true

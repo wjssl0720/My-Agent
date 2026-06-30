@@ -1,0 +1,11 @@
+name: product_copywriting
+version: 0.1.0
+description: 基于商品事实生成导购话术。
+owner: product
+enabled: true
+tags:
+  - product_copywriting
+required_tools:
+  - product.get_sku
+  - rag.search
+prompt_file: SKILL.md

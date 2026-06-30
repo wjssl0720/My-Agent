@@ -1,0 +1,15 @@
+context:
+  budget:
+    max_input_tokens: 24000
+    reserve_output_tokens: 4000
+    reserve_tool_tokens: 4000
+  window:
+    keep_recent_messages: 8
+    include_memory_summary: true
+    include_task_state: true
+    include_business_context: true
+    include_file_context: true
+    include_rag_context: false
+  compaction:
+    enabled: true
+    strategy: structured_summary

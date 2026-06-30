@@ -1,0 +1,15 @@
+tool_providers:
+  static:
+    enabled: true
+  rag:
+    enabled: true
+  mcp:
+    enabled: false
+    servers: []
+  skill:
+    enabled: true
+
+tool_resolution:
+  max_tools_per_request: 12
+  deny_unknown_tools: true
+  include_denied_tools_in_prompt: false

@@ -1,0 +1,7 @@
+evaluation:
+  default_judge: deterministic
+  llm_judge_enabled: false
+  regression:
+    fail_on_score_below: 0.8
+  report:
+    output_dir: evaluation_reports

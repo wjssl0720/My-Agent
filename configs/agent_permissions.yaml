@@ -1,0 +1,26 @@
+roles:
+  guest:
+    allow_tools: [rag.search]
+    deny_tools: []
+    require_approval: []
+
+  operator:
+    allow_tools: [rag.search, product.get_sku, product.search_similar]
+    deny_tools: [bi.run_readonly_sql, order.refund]
+    require_approval: []
+
+  analyst:
+    allow_tools: [rag.search, product.get_sku, product.search_similar, bi.run_readonly_sql, bi.generate_report]
+    deny_tools: []
+    require_approval: []
+
+  customer_service:
+    allow_tools: [rag.search, product.get_sku, order.get_order]
+    deny_tools: []
+    require_approval: [order.refund]
+
+rag_scopes:
+  ecommerce: [product_docs, operation_docs]
+  cs: [customer_service_docs, product_docs]
+  finance: [finance_docs]
+  guest: []

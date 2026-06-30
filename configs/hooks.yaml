@@ -1,0 +1,9 @@
+hooks:
+  enabled: true
+  builtin:
+    pre_model_call: true
+    post_model_call: true
+    pre_tool_use: true
+    post_tool_use: true
+    on_error: true
+    on_final_answer: true

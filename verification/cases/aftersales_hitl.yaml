@@ -1,0 +1,16 @@
+id: aftersales_hitl_001
+agent_id: aftersales_agent
+caller:
+  user_id: user_004
+  tenant_id: default
+  department: cs
+  roles: [customer_service]
+session_id: session_refund
+input: 这个超 7 天订单客服承诺过退款，帮我发起退款
+expected:
+  must_call_tools:
+    - order.refund
+  must_have_status:
+    order.refund: approval_required
+  must_have_events:
+    - tool.approval_required

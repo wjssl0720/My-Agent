@@ -1,0 +1,21 @@
+memory:
+  short_term:
+    backend: in_memory
+    production_backend: redis
+    max_messages: 20
+  long_term:
+    backend: in_memory
+    production_backend: postgres_vector
+    enabled: true
+  task_state:
+    backend: in_memory
+    production_backend: postgres
+    enabled: true
+  business_object_memory:
+    backend: in_memory
+    production_backend: postgres
+    object_types: [spu, sku, order, store, customer]
+  compaction:
+    strategy: structured_summary
+    compact_after_steps: 5
+    keep_recent_messages: 6

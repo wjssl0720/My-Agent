@@ -1,0 +1,12 @@
+execution:
+  backend: in_memory
+  production_backend: postgres_queue
+  checkpoint:
+    enabled: true
+    interval_steps: 1
+  retry:
+    max_attempts: 2
+  timeout:
+    default_seconds: 120
+  cancellation:
+    enabled: true

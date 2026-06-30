@@ -1,0 +1,10 @@
+name: citation_answer
+version: 0.1.0
+description: 基于引用回答。
+owner: platform
+enabled: true
+tags:
+  - citation_answer
+required_tools:
+  - rag.search
+prompt_file: SKILL.md

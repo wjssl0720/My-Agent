@@ -1,0 +1,24 @@
+id: product_loop_001
+agent_id: product_agent
+caller:
+  user_id: user_001
+  tenant_id: default
+  department: ecommerce
+  roles: [operator]
+session_id: session_product
+input: 帮我分析 SKU Y28H23093T1 的商品信息，并生成门店导购话术
+expected:
+  must_have_events:
+    - prompt.built
+    - context.assembled
+    - tools.resolved
+    - skills.loaded
+    - task.planned
+  must_call_tools:
+    - product.get_sku
+    - rag.search
+  must_not_call_tools:
+    - bi.run_readonly_sql
+  must_have_status:
+    product.get_sku: executed
+    rag.search: executed

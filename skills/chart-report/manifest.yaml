@@ -1,0 +1,10 @@
+name: chart_report
+version: 0.1.0
+description: 把数据分析结果组织成报告结构。
+owner: data
+enabled: true
+tags:
+  - chart_report
+required_tools:
+  - bi.generate_report
+prompt_file: SKILL.md

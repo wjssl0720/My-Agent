@@ -1,0 +1,16 @@
+id: rag_acl_001
+agent_id: knowledge_agent
+caller:
+  user_id: user_005
+  tenant_id: default
+  department: finance
+  roles: [guest]
+session_id: session_rag
+input: 查询财务制度
+expected:
+  must_call_tools:
+    - rag.search
+  must_have_status:
+    rag.search: executed
+  must_have_citation_titles:
+    - 财务制度

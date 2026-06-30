@@ -1,0 +1,10 @@
+name: policy_check
+version: 0.1.0
+description: 售后政策检查和高风险动作约束。
+owner: cs
+enabled: true
+tags:
+  - policy_check
+required_tools:
+  - rag.search
+prompt_file: SKILL.md

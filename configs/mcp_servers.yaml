@@ -1,0 +1,16 @@
+mcp_servers:
+  product:
+    enabled: false
+    base_url: http://product-mcp.local
+    auth_type: internal_token
+    tools: [product.get_sku, product.search_similar]
+  order:
+    enabled: false
+    base_url: http://order-mcp.local
+    auth_type: internal_token
+    tools: [order.get_order, order.refund]
+  rag:
+    enabled: false
+    base_url: http://rag-mcp.local
+    auth_type: internal_token
+    tools: [rag.search]
